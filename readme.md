@@ -3,7 +3,12 @@
 
 Simple tracking app. Track numbers, habits.
 
-![ss1](screenshots/running.jpg | width=120) ![ss2](screenshots/calendar.jpg | width=100) ![ss3](screenshots/picker.jpg | width=100) ![ss4](screenshots/new_item.jpg | width=100) 
+<p align="center">
+  <img src="screenshots/running.jpg" width="180" height="370">
+  <img src="screenshots/calendar.jpg" width="180" height="370">
+  <img src="screenshots/picker.jpg" width="180" height="370">
+  <img src="screenshots/new_item.jpg" width="180" height="370">
+</p>
 
 ### Third party libraries used
 
