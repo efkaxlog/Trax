@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Trax</string>
+    <string name="action_settings">Settings</string>
+    <string name="record_exists">Record with this date already exists in database.</string>
+    <string name="record_add_success">"Data added successfully.</string>
+    <string name="invalid_input">Invalid input</string>
+    <string name="record_removed">Record removed.</string>
+    <string name="record_updated">Record updated.</string>
+</resources>

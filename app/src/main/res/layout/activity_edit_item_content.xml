@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_new_item_activity"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.EditItemActivity.EditItemActivity"
+    tools:showIn="@layout/activity_edit_item">
+
+    <TextView
+        android:id="@+id/tv_new_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20dp"
+        android:text="Name"
+        android:maxLength="256"/>
+
+    <EditText
+        android:id="@+id/et_edit_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_new_item_name"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/tv_how_to_keep_track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_edit_item_name"
+        android:paddingTop="10dp"
+        android:text="How should the item be tracked?"
+        android:textSize="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/rg_tracking_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_how_to_keep_track"
+        android:orientation="vertical"
+        android:checkedButton="@id/rb_input_numbers_option">
+
+        <RadioButton
+            android:id="@+id/rb_input_numbers_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Track with numbers (e.g. input number of km ran)"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/rb_daily_tracking_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Once-a-day tracking, for custom goals (e.g. Drink 2L of water daily)" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_goal_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_tracking_type"
+        android:paddingTop="10dp"
+        android:textSize="20dp"
+        android:text="Do you want to reach a target or limit this?"/>
+
+    <RadioGroup
+        android:id="@+id/rg_goal_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_goal_question"
+        android:orientation="vertical"
+        android:checkedButton="@id/rb_goal_type_none">
+
+        <RadioButton
+            android:id="@+id/rb_goal_type_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="None - just keep track." />
+
+        <RadioButton
+            android:id="@+id/rb_goal_type_target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="I want to reach a target."/>
+
+        <RadioButton
+            android:id="@+id/rb_goal_type_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="I want to limit this." />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/layout_goal_value_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rg_goal_type"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/et_goal_value_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Enter value"
+            android:layout_weight="1" />
+
+        <RadioGroup
+            android:id="@+id/rg_goal_time_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="10"
+            android:checkedButton="@id/rb_goal_daily">
+
+            <RadioButton
+                android:id="@+id/rb_goal_daily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily"
+                android:layout_weight="1"/>
+
+            <RadioButton
+                android:id="@+id/rb_goal_weekly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weekly"
+                android:layout_weight="1" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_cancel_item_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/guildeline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="15dp"
+        android:text="Cancel"
+        android:backgroundTint="#EEE"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guildeline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <Button
+        android:id="@+id/btn_save_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guildeline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="15dp"
+        android:text="Save"
+        android:backgroundTint="#EEE"/>
+
+    <TextView
+        android:id="@+id/tv_goal_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Warning! When selecting once a day tracking along with a goal, make sure goal value doesn't exceed the number of days in your desired goal time frame!"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_goal_value_input"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

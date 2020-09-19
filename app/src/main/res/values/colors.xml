@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/green</color>
+    <color name="colorPrimaryDark">@color/colorBlue</color>
+    <color name="colorSecondary">@color/colorLightBlue</color>
+    <color name="colorAccent">@color/colorSecondary</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorDarkRed">#BB0000</color>
+    <color name="textColorPrimary">#696969</color>
+    <color name="chartColor">@color/colorSecondary</color>
+    <color name="colorBlue">#042f66</color>
+    <color name="colorLightBlue">#3f5f90</color>
+    <color name="green">#448438</color>
+</resources>
